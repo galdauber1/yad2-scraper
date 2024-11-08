@@ -4,7 +4,7 @@
   "projects": [
     {
       "topic": "",
-      "url": "https://www.yad2.co.il/realestate/rent?topArea=2&area=1&city=5000&neighborhood=1520&rooms=2--1&price=-1-9000&squaremeter=70--1&balcony=1&zoom=14"
+      "url": "https://www.yad2.co.il/realestate/rent?multiNeighborhood=1520%2C1521%2C848%2C205%2C1462&rooms=2--1&price=-1-9000&squaremeter=70--1&balcony=1"
     }
   ]
 }
