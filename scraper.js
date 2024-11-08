@@ -38,6 +38,7 @@ const scrapeItemsAndExtractImgUrls = async (url) => {
             imageUrls.push(imgSrc)
         }
     })
+    await telenode.sendTextMessage(`current apartments count : ${imageUrls.length}`, chatId)
     return imageUrls;
 }
 
