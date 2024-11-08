@@ -38,7 +38,6 @@ const scrapeItemsAndExtractImgUrls = async (url) => {
             imageUrls.push(imgSrc)
         }
     })
-    await telenode.sendTextMessage(`current apartments count : ${imageUrls.length}`, chatId)
     return imageUrls;
 }
 
@@ -90,6 +89,7 @@ const scrape = async (topic, url) => {
     try {
         await telenode.sendTextMessage(`Starting scanning ${topic} on link:\n${url}`, chatId)
         const scrapeImgResults = await scrapeItemsAndExtractImgUrls(url);
+        await telenode.sendTextMessage(`current apartments count : ${scrapeImgResults.length}`, chatId)
         const newItems = await checkIfHasNewItem(scrapeImgResults, topic);
         if (newItems.length > 0) {
             const newItemsJoined = newItems.join("\n----------\n");
