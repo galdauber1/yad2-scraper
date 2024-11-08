@@ -49,7 +49,7 @@ const checkIfHasNewItem = async (imgUrls, topic) => {
     } catch (e) {
         if (e.code === "MODULE_NOT_FOUND") {
             if (!fs.existsSync('data')) {
-                fs.mkdirSync('data);
+                fs.mkdirSync('data');
             }
             fs.writeFileSync(filePath, '[]');
         } else {
